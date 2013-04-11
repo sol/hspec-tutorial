@@ -22,4 +22,4 @@ spec = with app $ do
 
   context "when given an invalid request path" $ do
     it "responds with HTTP status 404" $ do
-      pending
+      get "/some-path" `shouldRespondWith` 404
