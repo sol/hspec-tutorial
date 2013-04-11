@@ -17,8 +17,8 @@ spec = with app $ do
     it "responds with HTTP status 200" $ do
       get "/" `shouldRespondWith` 200
 
-    it "says 'Hello!'" $ do
-      get "/" `shouldRespondWith` [json|{body: "Hello!"}|]
+    it "returns service name and version" $ do
+      get "/" `shouldRespondWith` [json|{name: "time-service", version: "0.1.0"}|]
 
   context "when given an invalid request path" $ do
     it "responds with HTTP status 404" $ do
