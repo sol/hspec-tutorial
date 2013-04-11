@@ -8,13 +8,14 @@ import           Web.Scotty
 import           Data.Time
 import           Control.Monad.IO.Class (liftIO)
 
-data Message = Message {
-  body :: String
+data Service = Service {
+  name    :: String
+, version :: String
 } deriving (Eq, Show, Generic)
 
-instance ToJSON Message
+instance ToJSON Service
 
 app :: IO Application
 app = scottyApp $ do
   get "/" $ do
-    json (Message "Hello!")
+    json (Service "time-service" "0.1.0")
