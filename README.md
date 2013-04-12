@@ -10,7 +10,7 @@ $ git clone https://github.com/sol/hspec-tutorial
 $ cd hspec-tutorial && cabal install --enable-tests --only-dependencies
 ```
 
-Now you can build an run the project with:
+Now you can build and run the project with:
 
 ```shell
 $ cabal configur --enable-test && cabal build && cabal test
@@ -61,7 +61,7 @@ to:
 
 #### Solution
 
- * https://github.com/sol/hspec-tutorial/blob/solution2/test/AppSpec.hs (specs)
+ * https://github.com/sol/hspec-tutorial/blob/solution2/src/App.hs (specs)
  * https://github.com/sol/hspec-tutorial/blob/solution2/test/AppSpec.hs (code)
 
 ## Problem 3
@@ -77,13 +77,13 @@ e.g.
 
 #### Hints
 
- * When you define the route in `src/App.hs` you have to start it with a '/'
+ * When you define the route in `src/App.hs` you have to start it with a `/`
    (say use `/current-time.json`), but in the specs you must omit it (say use
    `current-time.json`)!
  * `ActionM` has a `MonadIO` instance, so you can use `liftIO` to run
    `Data.Time.getCurrentTime` to get the current time.
  * But wait, don't use the real `getCurrentTime` in `app`, rather change its
-   type to `IO Application -> IO UTCTime`, so that you can pass in a _mock_ for
+   type to `IO UTCTime -> IO Application`, so that you can pass in a _mock_ for
    testing.
 
 #### Bonus
@@ -94,5 +94,5 @@ e.g.
 
 #### Solution
 
- * https://github.com/sol/hspec-tutorial/blob/solution3/test/AppSpec.hs (specs)
+ * https://github.com/sol/hspec-tutorial/blob/solution3/src/App.hs (specs)
  * https://github.com/sol/hspec-tutorial/blob/solution3/test/AppSpec.hs (code)
