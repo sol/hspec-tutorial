@@ -22,9 +22,10 @@ output.
 Try the following things:
 
  * Start GHCi with `ghci test/Spec.hs` and run all specs with `:main`.
- * Run specs selectively with `:main -m "when given an invalid request path"`
- * Change a spec in `test/AppSpec.hs` so that it fails and run it with `:main`,
-   rerun only the failing spec with `:main -r`
+ * Run specs selectively with `:main -m "when given an invalid request path"`.
+ * Change a spec in `test/AppSpec.hs` so that it fails, reload it with
+   `:reload` and run it with `:main`.  Now you can rerun only the failing spec
+   with `:main -r`.
 
 ## Problem 1
 
