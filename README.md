@@ -92,7 +92,7 @@ e.g.
 #### Bonus
 
  * Change the request path from `current-time.json` to `a` in both the specs
-   and the app.  Now run the specs with `:main -a 1000`.  Do they still pass?
+   and the app.  Now run the specs with `:main -a 100000`.  Do they still pass?
    If no, how can you remedy this?
 
 #### Solution
