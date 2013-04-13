@@ -27,7 +27,7 @@ Try the following things:
    `:reload` and run it with `:main`.  Now you can rerun only the failing spec
    with `:main -r`.
  * Start the service with `./dist/build/time-service/time-service` and point
-   your web browser to http://localhost:3000.
+   your web browser to http://localhost:3000/.
 
 ## Problem 1
 
