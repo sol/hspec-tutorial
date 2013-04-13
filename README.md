@@ -26,6 +26,8 @@ Try the following things:
  * Change a spec in `test/AppSpec.hs` so that it fails, reload it with
    `:reload` and run it with `:main`.  Now you can rerun only the failing spec
    with `:main -r`.
+ * Start the service with `./dist/build/time-service/time-service` and point
+   your web browser to http://localhost:3000.
 
 ## Problem 1
 
