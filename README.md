@@ -13,7 +13,7 @@ $ cd hspec-tutorial && cabal install --enable-tests --only-dependencies
 Now you can build and run the project with:
 
 ```shell
-$ cabal configur --enable-test && cabal build && cabal test
+$ cabal configure --enable-test && cabal build && cabal test
 ```
 
 But for development we prefer GHCi.  It is faster and provides nicer test
