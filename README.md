@@ -80,9 +80,6 @@ e.g.
 
 #### Hints
 
- * When you define the route in `src/App.hs` you have to start it with a `/`
-   (say use `/current-time.json`), but in the specs you must omit it (say use
-   `current-time.json`)!
  * `ActionM` has a `MonadIO` instance, so you can use `liftIO` to run
    `Data.Time.getCurrentTime` to get the current time.
  * But wait, don't use the real `getCurrentTime` in `app`, rather change its
@@ -91,7 +88,7 @@ e.g.
 
 #### Bonus
 
- * Change the request path from `current-time.json` to `a` in both the specs
+ * Change the request path from `/current-time.json` to `/a` in both the specs
    and the app.  Now run the specs with `:main -a 100000`.  Do they still pass?
    If no, how can you remedy this?
 
