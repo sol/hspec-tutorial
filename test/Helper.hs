@@ -15,7 +15,7 @@ import qualified Network.HTTP.Types as HTTP
 getPath :: ByteString -> Application -> IO SResponse
 getPath p = (runSession . srequest) (SRequest req "")
   where
-    req = setRawPathInfo defaultRequest p
+    req = setPath defaultRequest p
 
 body :: SResponse -> L.ByteString
 body res = simpleBody res

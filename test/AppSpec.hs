@@ -23,7 +23,7 @@ spec = do
       (statusCode <$> get "/") `shouldReturn` 200
 
     it "says 'Hello!'" $ do
-      (body <$> get "") `shouldReturn` "{\"body\":\"Hello!\"}"
+      (body <$> get "/") `shouldReturn` "{\"body\":\"Hello!\"}"
 
   context "when given an invalid request path" $ do
     it "responds with HTTP status 404" $ do
