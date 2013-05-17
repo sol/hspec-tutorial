@@ -36,11 +36,6 @@ code.  Refactor this to use the more specific `shouldRespondWith` (defined in
 `test/Helper.hs`).
  * `test/AppSpec.hs` contains some pending items.  Make them _green_.
 
-
-#### Solution
-
- * https://github.com/sol/hspec-tutorial/blob/solution1/test/AppSpec.hs (specs)
-
 ## Problem 2
 
 Change the application so that a request to `/` returns JSON that is equivalent
@@ -61,11 +56,6 @@ to:
    test for `name` and `version` separately.
  * Have a look at https://github.com/sol/json-fu#readme to understand how
    algebraic data types are mapped to JSON.
-
-#### Solution
-
- * https://github.com/sol/hspec-tutorial/blob/solution2/src/App.hs (specs)
- * https://github.com/sol/hspec-tutorial/blob/solution2/test/AppSpec.hs (code)
 
 ## Problem 3
 
@@ -91,8 +81,3 @@ e.g.
  * Change the request path from `/current-time.json` to `/a` in both the specs
    and the app.  Now run the specs with `:main -a 100000`.  Do they still pass?
    If no, how can you remedy this?
-
-#### Solution
-
- * https://github.com/sol/hspec-tutorial/blob/solution3/src/App.hs (specs)
- * https://github.com/sol/hspec-tutorial/blob/solution3/test/AppSpec.hs (code)
