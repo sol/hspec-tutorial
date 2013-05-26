@@ -10,7 +10,7 @@ $ git clone https://github.com/sol/hspec-tutorial
 $ cd hspec-tutorial && cabal install --enable-tests --only-dependencies
 ```
 
-Now you can build and run the project with:
+Now you can build the project and run the tests with:
 
 ```shell
 $ cabal configure --enable-test && cabal build && cabal test
