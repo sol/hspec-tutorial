@@ -70,7 +70,7 @@ e.g.
 
 #### Hints
 
- * `ActionM` has a `MonadIO` instance, so you can use `liftIO` to run
+ * `ActionM` has a `MonadIO` instance, so you can use `liftIO` and
    `Data.Time.getCurrentTime` to get the current time.
  * But wait, don't use the real `getCurrentTime` in `app`, rather change its
    type to `IO UTCTime -> IO Application`, so that you can pass in a _mock_ for
