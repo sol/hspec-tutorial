@@ -24,8 +24,8 @@ Try the following things:
  * Start GHCi with `ghci test/Spec.hs` and run all specs with `:main`.
  * Run specs selectively with e.g. `:main -m "when given an invalid request path"`.
  * Change a spec in `test/AppSpec.hs` so that it fails, reload it with
-   `:reload` and run it with `:main`.  Now you can rerun only the failing spec
-   with `:main -r`.
+   `:reload` and run it with `:main`.  Now you can rerun the failing spec with
+   `:main -r`.
  * Start the service with `./dist/build/time-service/time-service` and point
    your web browser to `http://localhost:3000/`.
 
