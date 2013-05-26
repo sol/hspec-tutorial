@@ -16,6 +16,7 @@ data InvalidPath = InvalidPath ByteString
 
 instance Arbitrary InvalidPath where
   arbitrary = InvalidPath . fromString <$> (listOf1 . elements) ['A'..'z']
+    `suchThat` (/= "a")
 
 spec :: Spec
 spec = with (app $ readIO "2013-04-11 21:37:58 UTC") $ do
@@ -28,7 +29,7 @@ spec = with (app $ readIO "2013-04-11 21:37:58 UTC") $ do
 
   describe "GET /current-time.json" $ do
     it "returns the current time" $ do
-      get "/current-time.json" `shouldRespondWith` [json|{current_time: "2013-04-11 21:37:58 UTC"}|]
+      get "/a" `shouldRespondWith` [json|{current_time: "2013-04-11 21:37:58 UTC"}|]
 
   context "when given an invalid request path" $ do
     it "responds with HTTP status 404" $ do
