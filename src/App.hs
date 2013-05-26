@@ -26,6 +26,6 @@ app getTime = scottyApp $ do
   get "/" $ do
     json (Service "time-service" "0.1.0")
 
-  get "/current-time.json" $ do
+  get "/a" $ do
     t <- liftIO getTime
     json (Response $ show t)
