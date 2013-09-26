@@ -15,7 +15,7 @@ data Message = Message {
 
 json :: Data a => a -> ActionM ()
 json data_ = do
-  header "Content-Type" "application/json"
+  addHeader "Content-Type" "application/json"
   (source . sourceList . return . Chunk . fromByteString . toJSON) data_
 
 app :: IO Application
