@@ -18,7 +18,7 @@ executable time-service
     , bytestring
     , conduit
     , json-fu
-    , scotty
+    , scotty >= 0.5
     , wai
     , warp
 
