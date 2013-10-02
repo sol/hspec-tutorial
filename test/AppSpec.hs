@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module AppSpec (main, spec) where
 
-import           Test.Hspec
+import           Test.Hspec hiding (shouldContain)
 import           Test.QuickCheck
 import           Network.Wai.Test (SResponse)
 import           Data.ByteString (ByteString)
