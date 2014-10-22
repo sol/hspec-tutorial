@@ -1,11 +1,10 @@
 {-# LANGUAGE OverloadedStrings, DeriveGeneric #-}
 module App where
 
-import           Data.Aeson (ToJSON)
-import           Web.Scotty
-import           Network.Wai
-
 import           GHC.Generics
+import           Data.Aeson (ToJSON)
+import           Network.Wai
+import           Web.Scotty
 
 data Message = Message {
   body :: String
