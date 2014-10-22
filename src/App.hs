@@ -1,20 +1,17 @@
-{-# LANGUAGE OverloadedStrings, DeriveDataTypeable #-}
+{-# LANGUAGE OverloadedStrings, DeriveGeneric #-}
 module App where
 
-import           Data.Data
-import           Data.JSON (toJSON)
-import qualified Data.ByteString.Lazy as LB
-import           Web.Scotty hiding (json)
+import           Data.Aeson (ToJSON)
+import           Web.Scotty
 import           Network.Wai
 
-data Message = Message {
-  messageBody :: String
-} deriving (Eq, Show, Data, Typeable)
+import           GHC.Generics
 
-json :: Data a => a -> ActionM ()
-json data_ = do
-  addHeader "Content-Type" "application/json"
-  raw (LB.fromStrict $ toJSON data_)
+data Message = Message {
+  body :: String
+} deriving (Eq, Show, Generic)
+
+instance ToJSON Message
 
 app :: IO Application
 app = scottyApp $ do

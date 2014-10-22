@@ -16,8 +16,8 @@ executable time-service
     , time
     , blaze-builder
     , bytestring
-    , json-fu
     , scotty >= 0.5
+    , aeson
     , wai
     , warp
 
@@ -36,8 +36,8 @@ test-suite spec
     , time
     , blaze-builder
     , bytestring
-    , json-fu
     , scotty
+    , aeson
     , wai
     , hspec >= 1.5.3
     , wai-extra >= 3

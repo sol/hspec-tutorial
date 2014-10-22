@@ -8,7 +8,7 @@ import           Data.ByteString (ByteString)
 import           Control.Applicative
 
 import           Helper
-import           App
+import           App (app)
 
 main :: IO ()
 main = hspec spec
