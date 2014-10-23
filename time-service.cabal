@@ -13,6 +13,8 @@ library
       App
   build-depends:
       base    == 4.*
+    , transformers
+    , time
     , aeson
     , wai
     , scotty >= 0.5
@@ -27,6 +29,7 @@ executable time-service
   build-depends:
       base    == 4.*
     , time-service
+    , time
     , warp
 
 test-suite spec
@@ -41,15 +44,10 @@ test-suite spec
   build-depends:
       base    == 4.*
     , time-service
-    , transformers
-    , time
-    , blaze-builder
     , bytestring
-    , scotty
-    , aeson
-    , wai
-    , hspec >= 1.5.3
-    , wai-extra >= 3
     , http-types
+    , wai
     , HUnit
     , QuickCheck
+    , hspec >= 1.5.3
+    , wai-extra >= 3
