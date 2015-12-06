@@ -50,4 +50,6 @@ test-suite spec
     , HUnit
     , QuickCheck
     , hspec >= 1.5.3
+    , hspec-wai >= 0.6.4
+    , hspec-wai-json
     , wai-extra >= 3

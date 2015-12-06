@@ -1,28 +1,21 @@
 {-# LANGUAGE OverloadedStrings #-}
-module AppSpec (main, spec) where
+{-# LANGUAGE QuasiQuotes #-}
+module AppSpec (spec) where
 
-import           Test.Hspec hiding (shouldContain)
-import           Test.QuickCheck
-import           Network.Wai.Test (SResponse)
-import           Data.ByteString (ByteString)
+import           Test.Hspec hiding (pending)
+import           Test.Hspec.Wai
+import           Test.Hspec.Wai.JSON
 
-import           Helper
 import           App (app)
 
-main :: IO ()
-main = hspec spec
-
-get :: ByteString -> IO SResponse
-get path = app >>= getPath path
-
 spec :: Spec
-spec = do
+spec = with app $ do
   describe "GET /" $ do
     it "responds with HTTP status 200" $ do
-      (statusCode <$> get "/") `shouldReturn` 200
+      get "/" `shouldRespondWith` 200
 
     it "says 'Hello!'" $ do
-      (body <$> get "/") `shouldReturn` "{\"body\":\"Hello!\"}"
+      get "/" `shouldRespondWith` [json|{body: "Hello!"}|]
 
   context "when given an invalid request path" $ do
     it "responds with HTTP status 404" $ do
@@ -30,5 +23,4 @@ spec = do
 
   context "when given an *arbitrary* invalid request path" $ do
     it "responds with HTTP status 404" $ do
-      property $
-        pending
+      pending
