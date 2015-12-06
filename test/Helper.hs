@@ -6,7 +6,6 @@ import           Test.HUnit (assertBool)
 import           Network.Wai.Test
 import           Network.Wai (Application)
 
-import           Control.Applicative
 import           Data.List (isInfixOf)
 import           Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy.Char8 as L

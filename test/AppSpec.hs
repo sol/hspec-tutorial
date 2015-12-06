@@ -5,7 +5,6 @@ import           Test.Hspec hiding (shouldContain)
 import           Test.QuickCheck
 import           Network.Wai.Test (SResponse)
 import           Data.ByteString (ByteString)
-import           Control.Applicative
 
 import           Helper
 import           App (app)
