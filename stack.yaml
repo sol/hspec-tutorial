@@ -1,0 +1,6 @@
+resolver: nightly-2015-12-06
+
+extra-deps:
+  - hspec-wai-0.6.4
+
+install-ghc: true
