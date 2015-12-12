@@ -20,6 +20,7 @@ are a beginner, use `stack`.
    $ cd hspec-tutorial
    $ stack test
    ```
+
 Try the following things:
 
  * Run all specs with `stack test`.
