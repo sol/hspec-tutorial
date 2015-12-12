@@ -3,7 +3,38 @@
 We will develop a small web service that provides access to the current time.
 
 There is a skeleton project at https://github.com/sol/hspec-tutorial.  To setup
-a local sandbox for development run:
+a local sandbox for development you can either use `stack` or `cabal`.  If you
+are a beginner, use `stack`.
+
+### Using `stack`
+
+1. Install `stack`: http://docs.haskellstack.org/en/stable/README.html#how-to-install
+2. Clone this repository:
+
+   ```
+   $ git clone https://github.com/sol/hspec-tutorial
+   ```
+3. Run the tests:
+
+   ```
+   $ cd hspec-tutorial
+   $ stack test
+   ```
+Try the following things:
+
+ * Run all specs with `stack test`.
+ * Change a spec in `test/AppSpec.hs` so that it fails, rerun specs with `stack
+   test`.
+ * Start the service with
+
+   ```
+   $ stack ghci
+   *Main> :main
+   ```
+
+   and point your web browser to <http://localhost:3000/>.
+
+### Using `cabal`
 
 ```shell
 $ git clone https://github.com/sol/hspec-tutorial
