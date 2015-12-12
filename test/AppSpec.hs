@@ -4,7 +4,10 @@ module AppSpec (spec) where
 
 import           Test.Hspec hiding (pending)
 import           Test.Hspec.Wai
+import           Test.Hspec.Wai.QuickCheck
 import           Test.Hspec.Wai.JSON
+import           Data.ByteString
+import           Data.String
 
 import           App (app)
 
