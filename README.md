@@ -63,7 +63,7 @@ Try the following things:
 
 ## Problem 1
 
-`test/AppSpec.hs` contains some pending items.  Make them _green_.
+`test/AppSpec.hs` contains a pending spec item.  Make it _green_.
 
 ## Problem 2
 
@@ -101,8 +101,21 @@ e.g.
    type to `IO UTCTime -> IO Application`, so that you can pass in a _mock_ for
    testing.
 
+## Problem 4
+
+Add a QuickCheck property for invalid request paths, start with
+
+```haskell
+spec = do
+  ...
+  context "when given an *arbitrary* invalid request path" $ do
+    it "responds with HTTP status 404" $ do
+      property $ do
+        pending
+```
+
 #### Bonus
 
- * Change the request path from `/current-time.json` to `/a` in both the specs
+ * Change the request path `/current-time.json` to `/a` in both the specs
    and the app.  Now run the specs with `stack test --test-arguments="-a 100000"` or
    `:main -a 100000`.  Do they still pass?  If no, how can you remedy this?
