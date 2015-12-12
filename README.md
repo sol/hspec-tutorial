@@ -63,10 +63,7 @@ Try the following things:
 
 ## Problem 1
 
- * In `test/AppSpec.hs` we use `shouldReturn` to test for the expected HTTP status
-code.  Refactor this to use the more specific `shouldRespondWith` (defined in
-`test/Helper.hs`).
- * `test/AppSpec.hs` contains some pending items.  Make them _green_.
+`test/AppSpec.hs` contains some pending items.  Make them _green_.
 
 ## Problem 2
 
@@ -84,10 +81,6 @@ to:
 
  * First adapt the specs in `test/AppSpec.hs`, run the specs and see them fail,
    work on `src/App.hs` until your specs are green again.
- * Use two expectations with `shouldContain` (defined in `test/Helper.hs`) to
-   test for `name` and `version` separately.
- * Have a look at https://github.com/sol/json-fu#readme to understand how
-   algebraic data types are mapped to JSON.
 
 ## Problem 3
 
