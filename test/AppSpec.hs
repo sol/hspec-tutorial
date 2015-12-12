@@ -26,4 +26,5 @@ spec = with app $ do
 
   context "when given an *arbitrary* invalid request path" $ do
     it "responds with HTTP status 404" $ do
-      pending
+      property $ do
+        pending
