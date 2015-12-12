@@ -104,5 +104,5 @@ e.g.
 #### Bonus
 
  * Change the request path from `/current-time.json` to `/a` in both the specs
-   and the app.  Now run the specs with `:main -a 100000`.  Do they still pass?
-   If no, how can you remedy this?
+   and the app.  Now run the specs with `stack test --test-arguments="-a 100000"` or
+   `:main -a 100000`.  Do they still pass?  If no, how can you remedy this?
