@@ -13,7 +13,7 @@ library
       base >= 4.8 && < 5
     , transformers
     , time
-    , aeson == 0.9.*
+    , aeson
     , wai
     , scotty >= 0.5
 
@@ -35,6 +35,8 @@ test-suite spec
       test
   main-is:
       Spec.hs
+  other-modules:
+      AppSpec
   build-depends:
       base >= 4.8 && < 5
     , time-service
@@ -47,3 +49,5 @@ test-suite spec
     , hspec-wai >= 0.6.4
     , hspec-wai-json
     , wai-extra >= 3
+  build-tool-depends:
+      hspec-discover:hspec-discover
